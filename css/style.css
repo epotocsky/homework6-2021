@@ -95,13 +95,9 @@ a:visited{
     animation-fill-mode: forwards;
 }
 
-@media screen and (prefers-reduced-motion: reduce){
-    #logo {
-        animation-name: none;
-    }
 
 @media screen and (min-width: 850px){
-    body>header{
+    body>header {
         position: sticky;
         top: 0;
         left: 0;
@@ -111,49 +107,47 @@ a:visited{
         justify-content: space-between;
     }
     .nav_links{
-        display: flex;
         flex-direction: row;
     }
-    .pricing{
-        display: flex;
-        flex-direction: row;
-    }
-
     .card{
         flex-basis: 250px;
     }
-    .card header{
-        position: static;
+    .pricing{
+        flex-direction: row;
     }
 }
-@media print {
+
+@media screen and (prefers-reduced-motion: reduce){
+    #logo {
+        animation-name: none;
+    }
+}
+
+@media print{
     body{
         background-image: none;
     }
 
-    nav {
+    nav{
         width: 100%;
     }
 
-    .nav_links {
+    .nav_links{
         display: flex;
+        flex-direction: row;
         justify-content: space-around;
-        flex-direction: row;
     }
-
-    .pricing {
+    .pricing{
         display: flex;
-        align-items: flex-end;
         flex-direction: row;
+        align-items: flex-end;
         justify-content: center;
-        flex-flow: nowrap;
     }
 
     .card{
-        border: 2px solid #45ADDD;
+        border: solid 2px #45ADAD;
         flex-basis: 250px;
     }
-
     #gallery, .gallery {
         display: none;
     }
@@ -166,7 +160,5 @@ a:visited{
     }
 
     #pricing, .pricing, .card li:nth-child(3)::before{
-        content: "\1F44D" ;
-    }
-
-}}
+        content: "\1F44D" ;}
+}
